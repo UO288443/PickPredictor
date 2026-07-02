@@ -1,0 +1,104 @@
+/* css/style.css */
+
+:root {
+    --bg-dark: #0f172a;
+    --card-bg: #1e293b;
+    --text-main: #f8fafc;
+    --text-dim: #94a3b8;
+    --accent: #38bdf8;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    font-family: 'Inter', sans-serif;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#lista-partidos { width: 100%; max-width: 500px; }
+
+section {
+    margin-bottom: 16px;
+    background: var(--card-bg);
+    border-radius: 10px;
+    border: 1px solid #334155;
+    overflow: hidden;
+}
+
+/* Título de competición prominente */
+.torneo-header {
+    padding: 16px 20px;
+    background: rgba(56, 189, 248, 0.1); /* Ligero tinte de color */
+    border-bottom: 2px solid var(--accent); /* Línea de color para destacar */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.torneo-header:hover { background: rgba(56, 189, 248, 0.2); }
+
+.torneo-header h2 {
+    font-size: 1.1rem; /* Más grande y claro */
+    font-weight: 700;
+    color: var(--text-main);
+    margin: 0;
+}
+
+/* Animación fluida con Grid */
+.contenido-torneo {
+    display: grid;
+    grid-template-rows: 1fr;
+    transition: grid-template-rows 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.colapsado {
+    grid-template-rows: 0fr;
+}
+
+.contenido-torneo > div { overflow: hidden; }
+
+/* Partidos más sutiles en comparación */
+.partido {
+    padding: 14px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #334155;
+    font-size: 0.95rem;
+    color: var(--text-dim);
+}
+
+.partido:last-child { border-bottom: none; }
+
+.partido span:last-child {
+    font-family: monospace;
+    font-size: 0.85rem;
+}
+
+.nav-bar {
+    display: flex;
+    justify-content: center; /* Centramos todo el bloque */
+    align-items: center;
+    gap: 20px; /* Separación clara entre elementos */
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+#fecha-display {
+    min-width: 120px; /* Asegura espacio suficiente para el texto */
+    text-align: center;
+    margin: 0;
+}   
+.nav-bar button {
+    background: var(--card-bg);
+    border: 1px solid var(--accent);
+    color: var(--accent);
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+}

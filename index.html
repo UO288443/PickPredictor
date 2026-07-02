@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Fútbol</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Partidos de Fútbol</h1>
+    </header>
+
+    <div class="nav-bar">
+        <button id="btn-atras" onclick="window.cambiarFecha(-1)">◀</button>
+        <h3 id="fecha-display">Cargando...</h3>
+        <button id="btn-adelante" onclick="window.cambiarFecha(1)">▶</button>
+    </div>
+
+    <main id="lista-partidos">
+        <p>Cargando partidos...</p>
+    </main>
+
+    <!-- Importante: type="module" -->
+    <script type="module" src="js/app.js"></script>
+</body>
+</html>
