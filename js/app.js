@@ -116,8 +116,22 @@ function actualizarEstadoBotones() {
     
     const diff = (refInicio - hoyInicio) / (1000 * 60 * 60 * 24);
 
-    document.getElementById('btn-atras').disabled = (diff <= -1);
-    document.getElementById('btn-adelante').disabled = (diff >= 1);
+    const btnAtras = document.getElementById('btn-atras');
+    const btnAdelante = document.getElementById('btn-adelante');
+
+    // Si diff es <= -1, ocultamos el botón atrás
+    if (diff <= -1) {
+        btnAtras.classList.add('oculto');
+    } else {
+        btnAtras.classList.remove('oculto');
+    }
+
+    // Si diff es >= 1, ocultamos el botón adelante
+    if (diff >= 1) {
+        btnAdelante.classList.add('oculto');
+    } else {
+        btnAdelante.classList.remove('oculto');
+    }
 }
 
 // Inicialización

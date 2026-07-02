@@ -102,3 +102,8 @@ section {
     border-radius: 8px;
     cursor: pointer;
 }
+/* Añade esto a tu archivo CSS */
+.nav-bar button.oculto {
+    visibility: hidden; /* O usa 'display: none' si prefieres que el espacio desaparezca */
+    pointer-events: none; /* Evita que el usuario haga clic por error */
+}
